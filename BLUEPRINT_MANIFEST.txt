@@ -1,0 +1,585 @@
+================================================================================
+HYBRID SELENIUM JAVA AUTOMATION FRAMEWORK - BLUEPRINT MANIFEST
+================================================================================
+
+Project: Scalable & Maintainable Hybrid Selenium Java Automation Framework
+Version: 1.0.0
+Date Created: 2026-06-22
+Status: BLUEPRINT PHASE COMPLETE ✓
+
+================================================================================
+DELIVERABLES SUMMARY
+================================================================================
+
+Total Files Created: 6 comprehensive blueprint documents
+Total Lines of Documentation: 5,841 lines
+Total Documentation Size: 172 KB
+Total Tables & Diagrams: 40+
+Total Code Classes Planned: 84+ main classes
+Total Test Classes Planned: 31 test classes
+Total Test Cases Designed: 30 tests (15 UI + 15 API)
+
+================================================================================
+BLUEPRINT DOCUMENTS
+================================================================================
+
+1. README.md (502 lines, 16 KB)
+   ├─ Purpose: Main entry point and quick reference guide
+   ├─ Contents:
+   │   • Welcome message and document overview
+   │   • Quick start guide for different roles
+   │   • Key statistics and architecture overview
+   │   • Component summary
+   │   • Test case distribution
+   │   • Implementation timeline table
+   │   • Success criteria checklist
+   │   • Support references and next steps
+   │   • Document version tracking
+   │   • Blueprint status overview
+   └─ Best for: Getting started, quick overview
+
+2. FRAMEWORK_BLUEPRINT.md (856 lines, 32 KB)
+   ├─ Purpose: Comprehensive framework architecture and design
+   ├─ Contents:
+   │   • Complete project directory structure (visual tree)
+   │   • Core dependencies with versions (15+ libraries)
+   │   • Main classes to create (organized by layer)
+   │   • Test structure overview (30 test cases)
+   │   • Architecture patterns & principles (SOLID)
+   │   • Configuration files structure
+   │   • Test data sources (JSON, Excel, CSV)
+   │   • Logging & reporting strategy
+   │   • CI/CD integration points
+   │   • Implementation considerations
+   │   • Key terms glossary
+   │   • Execution flow diagram
+   │   • Next steps checklist
+   └─ Best for: Detailed architecture understanding
+
+3. CLASS_HIERARCHY.md (1,466 lines, 36 KB)
+   ├─ Purpose: Detailed class specifications and design patterns
+   ├─ Contents:
+   │   • Class hierarchy overview (visual tree)
+   │   • 70+ class definitions with:
+   │     - Package location
+   │     - Inheritance chain
+   │     - Responsibilities
+   │     - Key methods
+   │     - Dependencies
+   │     - Thread safety notes
+   │   • Interface specifications
+   │   • Dependency matrix
+   │   • High-level architecture diagram
+   │   • Module dependency breakdown
+   │   • 7 design patterns explained with examples:
+   │     - Singleton
+   │     - Factory
+   │     - Template Method
+   │     - Builder
+   │     - Strategy
+   │     - Listener
+   │     - Utility/Helper
+   │   • Total classes: 84 main + 31 test
+   └─ Best for: Deep technical understanding, class implementation
+
+4. DIRECTORY_STRUCTURE.txt (456 lines, 24 KB)
+   ├─ Purpose: Detailed directory tree and file organization
+   ├─ Contents:
+   │   • Complete visual directory tree
+   │   • All 150+ files listed with purposes
+   │   • Directory summaries:
+   │     - Configuration layer (5 classes)
+   │     - Driver management (8 classes)
+   │     - Wait strategies (4 classes)
+   │     - Base classes (4 classes)
+   │     - Page objects (12 classes)
+   │     - Actions (5 classes)
+   │     - API testing (12 classes)
+   │     - Data handling (8 classes)
+   │     - AI integration (5 classes)
+   │     - Utilities (8 classes)
+   │     - Listeners & retry (5 classes)
+   │     - Reporting (4 classes)
+   │     - Exceptions (4 classes)
+   │   • Architectural layers explanation
+   │   • Parallel execution support notes
+   └─ Best for: Understanding project structure, file organization
+
+5. TEST_CASES_AND_ROADMAP.md (1,991 lines, 44 KB)
+   ├─ Purpose: Complete test case specifications and implementation timeline
+   ├─ Contents:
+   │   • UI Test Cases (15 total):
+   │     - Authentication (3): TC-001, TC-002, TC-003
+   │     - Product Management (4): TC-004, TC-005, TC-006, TC-007
+   │     - Shopping Cart (4): TC-008, TC-009, TC-010, TC-011
+   │     - User Profile (2): TC-012, TC-013
+   │     - Integration/E2E (2): TC-014, TC-015
+   │   • API Test Cases (15 total):
+   │     - Authentication API (3): TC-016, TC-017, TC-018
+   │     - User API (3): TC-019, TC-020, TC-021
+   │     - Product API (3): TC-022, TC-023, TC-024
+   │     - Order API (3): TC-025, TC-026, TC-027
+   │     - Integration (3): TC-028, TC-029, TC-030
+   │   • Each test case includes:
+   │     - Class and method name
+   │     - Category and priority
+   │     - Preconditions
+   │     - Step-by-step test steps
+   │     - Expected results
+   │     - Test data
+   │     - Assertions
+   │     - Dependencies
+   │     - Expected duration
+   │   • Implementation Roadmap:
+   │     - 11 phases (8 weeks total)
+   │     - Phase breakdown with tasks
+   │     - Deliverables per phase
+   │     - Estimated hours
+   │     - Key milestones
+   │     - Weekly schedule
+   │   • Success criteria
+   │   • Summary and status
+   └─ Best for: Test execution, implementation planning, validation
+
+6. BLUEPRINT_SUMMARY.txt (570 lines, 20 KB)
+   ├─ Purpose: Executive summary and quick reference
+   ├─ Contents:
+   │   • Project overview
+   │   • Quick facts (classes, tests, patterns)
+   │   • Core components summary (13 layers)
+   │   • Key architectural features (10 features)
+   │   • Design patterns used (7 patterns)
+   │   • Test case distribution (15 UI + 15 API)
+   │   • Core dependencies (15+ libraries)
+   │   • Directory structure highlights
+   │   • Execution strategy (commands)
+   │   • Implementation timeline (11 phases)
+   │   • Success criteria checklist
+   │   • Key files created
+   │   • Next steps and phases
+   │   • Contact & maintenance
+   │   • Blueprint status
+   └─ Best for: Executive overview, quick reference
+
+7. BLUEPRINT_MANIFEST.txt (This file, ~200 lines)
+   ├─ Purpose: Manifest of all deliverables
+   ├─ Contents:
+   │   • Deliverables summary
+   │   • Document descriptions
+   │   • Complete specifications
+   │   • How to use each document
+   │   • Statistics
+   │   • Checklist of what's delivered
+   │   • Quick reference index
+   │   • Next steps for implementation
+   └─ Best for: Tracking deliverables, manifest tracking
+
+================================================================================
+COMPLETE BLUEPRINT SPECIFICATIONS
+================================================================================
+
+PART 1: ARCHITECTURE & DESIGN
+├─ Framework Overview
+│  ├─ Hybrid approach (UI + API)
+│  ├─ Thread-safe operations
+│  ├─ Parallel execution ready
+│  ├─ Multi-environment support
+│  └─ AI-powered capabilities
+│
+├─ Design Patterns (7 total)
+│  ├─ Singleton (ConfigManager, DriverManager, ReportManager)
+│  ├─ Factory (DriverFactory, CapabilityFactory, WaitFactory)
+│  ├─ Template Method (BasePage, BaseTest, BaseActions, BaseAPI)
+│  ├─ Builder (TestDataBuilder, RequestSpecBuilder)
+│  ├─ Strategy (DataReader implementations)
+│  ├─ Listener (TestNG listeners)
+│  └─ Utility/Helper (Various utility classes)
+│
+├─ Core Layers (10 layers)
+│  ├─ Configuration Layer
+│  ├─ Driver Management Layer
+│  ├─ Wait Strategies Layer
+│  ├─ Base Classes Layer
+│  ├─ Page Object Model Layer
+│  ├─ Action Classes Layer
+│  ├─ API Testing Layer
+│  ├─ Data Handling Layer
+│  ├─ AI Integration Layer
+│  └─ Utilities & Helpers Layer
+│
+└─ Supporting Layers (3 layers)
+   ├─ Listeners & Retry Layer
+   ├─ Reporting Layer
+   └─ Exception Handling Layer
+
+PART 2: IMPLEMENTATION SPECIFICATIONS
+├─ Main Classes (84 classes)
+│  ├─ Configuration (5)
+│  ├─ Driver Management (8)
+│  ├─ Waits (4)
+│  ├─ Base (4)
+│  ├─ Pages (12)
+│  ├─ Actions (5)
+│  ├─ API (12)
+│  ├─ Data (8)
+│  ├─ AI (5)
+│  ├─ Utilities (8)
+│  ├─ Listeners (5)
+│  ├─ Reporting (4)
+│  └─ Exceptions (4)
+│
+├─ Test Classes (31 classes)
+│  ├─ UI Tests (15)
+│  │  ├─ Auth (3)
+│  │  ├─ Product (4)
+│  │  ├─ Cart (4)
+│  │  ├─ User (2)
+│  │  └─ Integration (2)
+│  └─ API Tests (15)
+│     ├─ Auth (3)
+│     ├─ User (3)
+│     ├─ Product (3)
+│     ├─ Order (3)
+│     └─ Integration (3)
+│
+└─ Configuration & Data Files (20+ files)
+   ├─ Maven (pom.xml)
+   ├─ TestNG (testng.xml)
+   ├─ Logging (log4j2.xml)
+   ├─ Properties (5 environment configs)
+   ├─ Test Data (10+ JSON/Excel/CSV files)
+   └─ Locators (4+ property files)
+
+PART 3: TEST SPECIFICATIONS
+├─ UI Tests (15 tests)
+│  ├─ Authentication Module (3 tests)
+│  │  ├─ Valid Login (P0)
+│  │  ├─ Invalid Login (P1)
+│  │  └─ Password Reset (P1)
+│  ├─ Product Management (4 tests)
+│  │  ├─ Search Product (P0)
+│  │  ├─ Filter Products (P1)
+│  │  ├─ Sort Products (P2)
+│  │  └─ View Details (P1)
+│  ├─ Shopping Cart (4 tests)
+│  │  ├─ Add to Cart (P0)
+│  │  ├─ Remove from Cart (P1)
+│  │  ├─ Update Quantity (P1)
+│  │  └─ Checkout Flow (P0)
+│  ├─ User Profile (2 tests)
+│  │  ├─ Update Profile (P1)
+│  │  └─ Change Password (P1)
+│  └─ Integration/E2E (2 tests)
+│     ├─ E2E Purchase (P0)
+│     └─ Guest Checkout (P1)
+│
+└─ API Tests (15 tests)
+   ├─ Authentication API (3 tests)
+   │  ├─ Login API (P0)
+   │  ├─ Token Refresh (P1)
+   │  └─ Logout API (P1)
+   ├─ User API (3 tests)
+   │  ├─ Get User Profile (P1)
+   │  ├─ Update User (P1)
+   │  └─ Delete User (P2)
+   ├─ Product API (3 tests)
+   │  ├─ Get Products List (P1)
+   │  ├─ Search Products (P1)
+   │  └─ Get Product by ID (P1)
+   ├─ Order API (3 tests)
+   │  ├─ Create Order (P0)
+   │  ├─ Get Order Status (P1)
+   │  └─ Cancel Order (P1)
+   └─ Integration (3 tests)
+      ├─ Create & Login (P1)
+      ├─ Order Flow (P0)
+      └─ Update & Retrieve (P1)
+
+PART 4: DEPENDENCIES
+├─ Core Dependencies (15 libraries)
+│  ├─ Selenium WebDriver 4.15.0
+│  ├─ TestNG 7.8.1
+│  ├─ RestAssured 5.3.2
+│  ├─ Allure 2.21.0
+│  ├─ Apache POI 5.0.0
+│  ├─ SLF4J 2.0.5
+│  ├─ Log4j2 2.20.0
+│  ├─ Gson 2.10.1
+│  ├─ Jackson 2.15.2
+│  ├─ Lombok 1.18.30
+│  ├─ AssertJ 3.24.1
+│  ├─ Commons CSV 1.10.0
+│  ├─ Commons Codec 1.15
+│  ├─ Commons IO 2.13.0
+│  └─ HttpClient5 5.2.1
+│
+└─ Optional Dependencies (Database, Image Processing)
+   └─ PostgreSQL, PDF Compare, etc.
+
+PART 5: IMPLEMENTATION ROADMAP
+├─ Phase 1: Foundation (40 hours)
+│  └─ Maven setup, Config layer, Driver management
+├─ Phase 2: Base Classes & POM (50 hours)
+│  └─ Base classes, 12 page objects, 5 action classes
+├─ Phase 3: Data & Utilities (30 hours)
+│  └─ Data readers, Utility classes, Test data
+├─ Phase 4: API Layer (35 hours)
+│  └─ API helpers, Models, Endpoint definitions
+├─ Phase 5: AI Integration (25 hours)
+│  └─ Ollama integration, Self-healing, AI tools
+├─ Phase 6: Listeners & Retry (15 hours)
+│  └─ Test listeners, Retry mechanism
+├─ Phase 7: Reporting (15 hours)
+│  └─ Allure, ExtentReports, Report configuration
+├─ Phase 8: UI Tests (40 hours)
+│  └─ 15 UI test classes with full implementation
+├─ Phase 9: API Tests (35 hours)
+│  └─ 15 API test classes with full implementation
+└─ Phase 10: CI/CD & Documentation (20 hours)
+   └─ Pipeline setup, Documentation, Optimization
+
+Total Duration: 8 weeks (320 hours)
+
+PART 6: DELIVERABLES CHECKLIST
+├─ Documentation Phase (COMPLETE ✓)
+│  ✓ Architecture designed
+│  ✓ All classes specified
+│  ✓ All test cases documented
+│  ✓ Implementation timeline created
+│  ✓ Dependencies listed
+│  ✓ Patterns documented
+│  ✓ Configuration structure defined
+│  ✓ 5,841 lines of documentation
+│  ✓ 40+ tables and diagrams
+│  └─ 6 comprehensive documents
+│
+└─ Implementation Phase (PENDING)
+   → Follow TEST_CASES_AND_ROADMAP.md
+   → 320 hours estimated
+   → 8 weeks timeline
+
+================================================================================
+HOW TO USE THESE BLUEPRINTS
+================================================================================
+
+FOR DEVELOPERS:
+1. Start with README.md (10 minutes)
+2. Review FRAMEWORK_BLUEPRINT.md sections 1-3 (20 minutes)
+3. Study CLASS_HIERARCHY.md for your assigned component (1-2 hours)
+4. Refer to DIRECTORY_STRUCTURE.txt for file placement
+5. Implement following BLUEPRINT_SUMMARY.txt architecture
+6. Check TEST_CASES_AND_ROADMAP.md for timeline
+
+FOR ARCHITECTS:
+1. Review BLUEPRINT_SUMMARY.txt (10 minutes)
+2. Study FRAMEWORK_BLUEPRINT.md completely (1 hour)
+3. Review design patterns in CLASS_HIERARCHY.md (30 minutes)
+4. Check architectural layers in DIRECTORY_STRUCTURE.txt (30 minutes)
+5. Validate against success criteria in TEST_CASES_AND_ROADMAP.md
+
+FOR QA ENGINEERS:
+1. Read test case details in TEST_CASES_AND_ROADMAP.md (1-2 hours)
+2. Review test distribution in BLUEPRINT_SUMMARY.txt (10 minutes)
+3. Check dependencies in FRAMEWORK_BLUEPRINT.md (20 minutes)
+4. Plan test execution strategy
+5. Prepare test data files
+
+FOR PROJECT MANAGERS:
+1. Read BLUEPRINT_SUMMARY.txt overview (10 minutes)
+2. Review timeline in TEST_CASES_AND_ROADMAP.md (20 minutes)
+3. Check success criteria (10 minutes)
+4. Plan resource allocation
+5. Track against implementation phases
+
+FOR TECH LEADS:
+1. Review all documents (2-3 hours)
+2. Create implementation tasks from roadmap
+3. Assign tasks to team members
+4. Setup development environment
+5. Create code templates from specifications
+
+================================================================================
+QUICK REFERENCE INDEX
+================================================================================
+
+Need to find...                              → See document
+Overall framework overview                   → README.md
+Quick statistics and facts                   → BLUEPRINT_SUMMARY.txt
+Complete architecture details                → FRAMEWORK_BLUEPRINT.md
+Class specifications and methods             → CLASS_HIERARCHY.md
+Directory structure and file organization    → DIRECTORY_STRUCTURE.txt
+Test case specifications                     → TEST_CASES_AND_ROADMAP.md
+Implementation timeline                      → TEST_CASES_AND_ROADMAP.md
+Design patterns explanation                  → CLASS_HIERARCHY.md
+Dependencies and versions                    → FRAMEWORK_BLUEPRINT.md
+Configuration structure                      → FRAMEWORK_BLUEPRINT.md
+Success criteria                             → BLUEPRINT_SUMMARY.txt
+Next implementation steps                    → README.md
+
+================================================================================
+STATISTICS & METRICS
+================================================================================
+
+Documentation Quality:
+  • Total Lines: 5,841
+  • Total Size: 172 KB
+  • Tables: 40+
+  • Diagrams: 12+
+  • Code Examples: 50+
+
+Architecture Metrics:
+  • Total Classes: 84+
+  • Test Classes: 31
+  • Test Cases: 30
+  • Interfaces: 5+
+  • Design Patterns: 7
+  • Architectural Layers: 10+
+  • Dependencies: 15+
+
+Test Coverage:
+  • UI Tests: 15 (covering 5 modules)
+  • API Tests: 15 (covering 5 modules)
+  • Critical Tests (P0): 6
+  • High Priority (P1): 20
+  • Medium Priority (P2): 4
+  • Average Test Duration: 5-30 seconds each
+
+Implementation Effort:
+  • Estimated Hours: 320
+  • Timeline: 8 weeks
+  • Average Hours/Week: 40
+  • Phases: 11 phases
+
+================================================================================
+SUCCESS CRITERIA - BLUEPRINT PHASE
+================================================================================
+
+✓ Architecture Designed
+  ✓ 10+ layers defined
+  ✓ 7 design patterns identified
+  ✓ Component interactions mapped
+  ✓ Scalability considered
+
+✓ Classes Specified
+  ✓ 84 main classes documented
+  ✓ 31 test classes outlined
+  ✓ All methods listed
+  ✓ Dependencies mapped
+
+✓ Tests Documented
+  ✓ 30 test cases designed (TC-001 to TC-030)
+  ✓ Preconditions specified
+  ✓ Test steps detailed
+  ✓ Expected results defined
+  ✓ Assertions specified
+
+✓ Timeline Created
+  ✓ 11 phases planned
+  ✓ 8-week schedule
+  ✓ 320 hours estimated
+  ✓ Deliverables per phase
+
+✓ Documentation Complete
+  ✓ 6 comprehensive documents
+  ✓ 5,841 lines of specs
+  ✓ 40+ tables and diagrams
+  ✓ Quick reference guides
+
+================================================================================
+NEXT STEPS FOR IMPLEMENTATION
+================================================================================
+
+WEEK 1 (Before Coding):
+  □ Review all 6 blueprint documents
+  □ Get stakeholder approval
+  □ Setup Git repository
+  □ Create development branches
+  □ Prepare development environment
+
+WEEK 2-3 (Foundation):
+  □ Create Maven project structure
+  □ Add all dependencies to pom.xml
+  □ Create directory structure
+  □ Implement ConfigManager
+  □ Implement DriverManager
+
+WEEKS 4-9 (Core Implementation):
+  □ Follow TEST_CASES_AND_ROADMAP.md phases 1-9
+  □ Create classes in priority order
+  □ Implement base classes first
+  □ Then page objects and actions
+  □ Then API layer
+  □ Then tests
+
+WEEK 10+ (Testing & Refinement):
+  □ Execute all 30 test cases
+  □ Achieve 100% pass rate
+  □ Optimize performance
+  □ Setup CI/CD pipeline
+  □ Complete documentation
+
+================================================================================
+BLUEPRINT COMPLETION STATUS
+================================================================================
+
+Document Status: ALL COMPLETE ✓
+
+  ✓ README.md                      [502 lines]   Complete
+  ✓ FRAMEWORK_BLUEPRINT.md         [856 lines]   Complete
+  ✓ CLASS_HIERARCHY.md             [1,466 lines] Complete
+  ✓ DIRECTORY_STRUCTURE.txt        [456 lines]   Complete
+  ✓ TEST_CASES_AND_ROADMAP.md      [1,991 lines] Complete
+  ✓ BLUEPRINT_SUMMARY.txt          [570 lines]   Complete
+  ✓ BLUEPRINT_MANIFEST.txt         [~400 lines]  Complete (this file)
+
+Blueprint Phase: 100% COMPLETE ✓
+Ready for Implementation: YES ✓
+
+================================================================================
+CLOSING REMARKS
+================================================================================
+
+This comprehensive blueprint provides:
+
+1. COMPLETE ARCHITECTURAL DESIGN
+   - All components specified
+   - All dependencies identified
+   - All design patterns documented
+
+2. DETAILED SPECIFICATIONS
+   - 84 main classes fully specified
+   - 31 test classes outlined
+   - 30 test cases documented
+   - Methods and responsibilities defined
+
+3. IMPLEMENTATION ROADMAP
+   - 11 phases planned
+   - 320 hours estimated
+   - 8-week timeline
+   - Clear deliverables per phase
+
+4. COMPREHENSIVE DOCUMENTATION
+   - 5,841 lines of specs
+   - 40+ tables and diagrams
+   - 6 interconnected documents
+   - Quick reference guides
+
+5. READY FOR DEVELOPMENT
+   - Clear next steps
+   - Defined success criteria
+   - Organized file structure
+   - Complete dependency list
+
+The framework is now ready to be IMPLEMENTED.
+
+Begin with the README.md file and follow the implementation roadmap in
+TEST_CASES_AND_ROADMAP.md for smooth and structured development.
+
+================================================================================
+Document Version: 1.0.0
+Created: 2026-06-22
+Status: BLUEPRINT PHASE COMPLETE ✓
+Next Phase: Implementation (Awaiting Approval)
+
+For questions or updates, refer to the relevant blueprint document.
+================================================================================

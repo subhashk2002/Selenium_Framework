@@ -1,0 +1,456 @@
+================================================================================
+HYBRID SELENIUM JAVA AUTOMATION FRAMEWORK - COMPLETE DIRECTORY STRUCTURE
+================================================================================
+
+SeleniumJavaFramework/
+│
+├── pom.xml                                    [Maven build configuration file]
+├── FRAMEWORK_BLUEPRINT.md                     [Complete framework design document]
+├── DIRECTORY_STRUCTURE.txt                    [This file - directory organization]
+├── README.md                                  [Quick start guide]
+├── .gitignore                                 [Git ignore patterns]
+│
+├── src/
+│   │
+│   ├── main/
+│   │   └── java/
+│   │       └── com/automation/framework/
+│   │           │
+│   │           ├── config/                    [CONFIGURATION MANAGEMENT LAYER]
+│   │           │   ├── ConfigManager.java
+│   │           │   ├── PropertyReader.java
+│   │           │   ├── EnvironmentConfig.java
+│   │           │   └── constants/
+│   │           │       ├── FrameworkConstants.java
+│   │           │       ├── BrowserType.java
+│   │           │       ├── Platform.java
+│   │           │       └── TimeoutConstants.java
+│   │           │
+│   │           ├── driver/                    [DRIVER MANAGEMENT LAYER]
+│   │           │   ├── DriverManager.java
+│   │           │   ├── DriverFactory.java
+│   │           │   ├── WebDriverListener.java
+│   │           │   └── capabilities/
+│   │           │       ├── CapabilityFactory.java
+│   │           │       ├── ChromeCapabilities.java
+│   │           │       ├── FirefoxCapabilities.java
+│   │           │       └── EdgeCapabilities.java
+│   │           │
+│   │           ├── waits/                     [WAIT STRATEGIES LAYER]
+│   │           │   ├── WaitHelper.java
+│   │           │   ├── CustomWait.java
+│   │           │   ├── WaitFactory.java
+│   │           │   └── WaitStrategies.java
+│   │           │
+│   │           ├── base/                      [BASE CLASSES]
+│   │           │   ├── BasePage.java
+│   │           │   ├── BaseTest.java
+│   │           │   ├── BaseActions.java
+│   │           │   └── BaseAPI.java
+│   │           │
+│   │           ├── pages/                     [PAGE OBJECT MODEL (POM)]
+│   │           │   │
+│   │           │   ├── auth/                  [Authentication Pages]
+│   │           │   │   ├── LoginPage.java
+│   │           │   │   ├── RegisterPage.java
+│   │           │   │   └── ForgotPasswordPage.java
+│   │           │   │
+│   │           │   ├── dashboard/             [Dashboard Pages]
+│   │           │   │   ├── HomePage.java
+│   │           │   │   ├── DashboardPage.java
+│   │           │   │   └── ProfilePage.java
+│   │           │   │
+│   │           │   ├── product/               [Product Pages]
+│   │           │   │   ├── ProductListPage.java
+│   │           │   │   ├── ProductDetailPage.java
+│   │           │   │   └── SearchPage.java
+│   │           │   │
+│   │           │   ├── cart/                  [Cart & Checkout Pages]
+│   │           │   │   ├── CartPage.java
+│   │           │   │   └── CheckoutPage.java
+│   │           │   │
+│   │           │   └── common/                [Common/Shared Pages]
+│   │           │       ├── CommonPage.java
+│   │           │       └── NavigationBar.java
+│   │           │
+│   │           ├── actions/                   [REUSABLE ACTION CLASSES]
+│   │           │   ├── AuthActions.java
+│   │           │   ├── ProductActions.java
+│   │           │   ├── CartActions.java
+│   │           │   ├── CommonActions.java
+│   │           │   └── SearchActions.java
+│   │           │
+│   │           ├── api/                       [API TESTING LAYER]
+│   │           │   │
+│   │           │   ├── endpoints/             [API Endpoint Definitions]
+│   │           │   │   ├── AuthEndpoints.java
+│   │           │   │   ├── UserEndpoints.java
+│   │           │   │   ├── ProductEndpoints.java
+│   │           │   │   └── OrderEndpoints.java
+│   │           │   │
+│   │           │   ├── models/                [Request/Response DTOs]
+│   │           │   │   ├── request/
+│   │           │   │   │   ├── LoginRequest.java
+│   │           │   │   │   ├── UserRequest.java
+│   │           │   │   │   ├── OrderRequest.java
+│   │           │   │   │   └── ProductRequest.java
+│   │           │   │   │
+│   │           │   │   └── response/
+│   │           │   │       ├── LoginResponse.java
+│   │           │   │       ├── UserResponse.java
+│   │           │   │       ├── OrderResponse.java
+│   │           │   │       └── ProductResponse.java
+│   │           │   │
+│   │           │   ├── helpers/               [API Helper Classes]
+│   │           │   │   ├── APIHelper.java
+│   │           │   │   ├── APIClient.java
+│   │           │   │   ├── AuthTokenManager.java
+│   │           │   │   └── ResponseValidator.java
+│   │           │   │
+│   │           │   └── specs/                 [RestAssured Specifications]
+│   │           │       ├── RequestSpecBuilder.java
+│   │           │       └── ResponseSpecBuilder.java
+│   │           │
+│   │           ├── data/                      [DATA HANDLING LAYER]
+│   │           │   │
+│   │           │   ├── readers/               [Data Reader Implementations]
+│   │           │   │   ├── DataReader.java
+│   │           │   │   ├── JSONDataReader.java
+│   │           │   │   ├── ExcelDataReader.java
+│   │           │   │   ├── CSVDataReader.java
+│   │           │   │   └── DatabaseDataReader.java
+│   │           │   │
+│   │           │   ├── models/                [Test Data Models]
+│   │           │   │   ├── TestData.java
+│   │           │   │   ├── UserTestData.java
+│   │           │   │   └── ProductTestData.java
+│   │           │   │
+│   │           │   └── builders/              [Test Data Builders]
+│   │           │       ├── TestDataBuilder.java
+│   │           │       └── UserDataBuilder.java
+│   │           │
+│   │           ├── ai/                        [AI INTEGRATION LAYER (OLLAMA)]
+│   │           │   ├── OllamaAIHelper.java
+│   │           │   ├── SelfHealingHelper.java
+│   │           │   ├── TestDataGeneratorAI.java
+│   │           │   ├── FailureAnalyzerAI.java
+│   │           │   └── models/
+│   │           │       ├── OllamaRequest.java
+│   │           │       └── OllamaResponse.java
+│   │           │
+│   │           ├── utilities/                 [UTILITY CLASSES]
+│   │           │   ├── FileUtils.java
+│   │           │   ├── DateTimeUtils.java
+│   │           │   ├── RandomDataGenerator.java
+│   │           │   ├── EncryptionUtils.java
+│   │           │   ├── ImageComparisonUtils.java
+│   │           │   ├── ScreenshotUtils.java
+│   │           │   ├── EmailValidator.java
+│   │           │   └── RetryUtils.java
+│   │           │
+│   │           ├── listeners/                 [TESTNG LISTENERS]
+│   │           │   ├── TestListeners.java
+│   │           │   ├── RetryListener.java
+│   │           │   └── ScreenshotListener.java
+│   │           │
+│   │           ├── retry/                     [RETRY MECHANISMS]
+│   │           │   ├── RetryAnalyzer.java
+│   │           │   └── RetryPolicy.java
+│   │           │
+│   │           ├── reporting/                 [REPORTING LAYER]
+│   │           │   ├── ReportManager.java
+│   │           │   ├── AllureReportHelper.java
+│   │           │   ├── TestReporter.java
+│   │           │   └── ExtentReportHelper.java
+│   │           │
+│   │           └── exceptions/                [CUSTOM EXCEPTIONS]
+│   │               ├── FrameworkException.java
+│   │               ├── ElementNotFoundException.java
+│   │               ├── APIException.java
+│   │               └── ConfigurationException.java
+│   │
+│   └── test/
+│       └── java/
+│           └── com/automation/framework/
+│               │
+│               ├── ui/                        [UI TEST CLASSES (15 Tests)]
+│               │   │
+│               │   ├── auth/                  [Authentication Tests - 3 Tests]
+│               │   │   ├── LoginTests.java
+│               │   │   ├── RegisterTests.java
+│               │   │   └── ForgotPasswordTests.java
+│               │   │
+│               │   ├── product/               [Product Tests - 4 Tests]
+│               │   │   ├── ProductListTests.java
+│               │   │   ├── ProductSearchTests.java
+│               │   │   ├── ProductFilterTests.java
+│               │   │   └── ProductDetailTests.java
+│               │   │
+│               │   ├── cart/                  [Cart & Checkout Tests - 4 Tests]
+│               │   │   ├── CartTests.java
+│               │   │   ├── CheckoutTests.java
+│               │   │   ├── PaymentTests.java
+│               │   │   └── CartOperationsTests.java
+│               │   │
+│               │   ├── user/                  [User Profile Tests - 2 Tests]
+│               │   │   ├── ProfileTests.java
+│               │   │   └── SettingsTests.java
+│               │   │
+│               │   └── integration/           [E2E Tests - 2 Tests]
+│               │       ├── E2ELoginToCheckoutTests.java
+│               │       └── FullUserJourneyTests.java
+│               │
+│               ├── api/                       [API TEST CLASSES (15 Tests)]
+│               │   │
+│               │   ├── auth/                  [Auth API Tests - 3 Tests]
+│               │   │   ├── LoginAPITests.java
+│               │   │   ├── TokenRefreshAPITests.java
+│               │   │   └── LogoutAPITests.java
+│               │   │
+│               │   ├── user/                  [User API Tests - 3 Tests]
+│               │   │   ├── UserAPITests.java
+│               │   │   ├── UserProfileAPITests.java
+│               │   │   └── UserDeletionAPITests.java
+│               │   │
+│               │   ├── product/               [Product API Tests - 3 Tests]
+│               │   │   ├── ProductAPITests.java
+│               │   │   ├── ProductSearchAPITests.java
+│               │   │   └── ProductListAPITests.java
+│               │   │
+│               │   ├── order/                 [Order API Tests - 3 Tests]
+│               │   │   ├── OrderAPITests.java
+│               │   │   ├── OrderStatusAPITests.java
+│               │   │   └── OrderCancellationAPITests.java
+│               │   │
+│               │   └── integration/           [Cross-API Flow Tests - 3 Tests]
+│               │       ├── APIChainingTests.java
+│               │       ├── CrossAPIFlowTests.java
+│               │       └── CompleteOrderFlowTests.java
+│               │
+│               └── utilities/
+│                   └── TestBase.java          [Common test utilities]
+│
+├── src/test/resources/
+│   │
+│   ├── testng.xml                             [TestNG configuration]
+│   ├── application.properties                  [Main framework properties]
+│   ├── log4j2.xml                             [Logging configuration]
+│   │
+│   ├── config/                                [Environment-Specific Configs]
+│   │   ├── dev.properties
+│   │   ├── staging.properties
+│   │   ├── prod.properties
+│   │   └── local.properties
+│   │
+│   ├── testdata/                              [Test Data Files]
+│   │   │
+│   │   ├── json/                              [JSON Test Data]
+│   │   │   ├── loginData.json
+│   │   │   ├── userData.json
+│   │   │   ├── productData.json
+│   │   │   └── orderData.json
+│   │   │
+│   │   ├── excel/                             [Excel Test Data]
+│   │   │   ├── testCases.xlsx
+│   │   │   └── testData.xlsx
+│   │   │
+│   │   └── csv/                               [CSV Test Data]
+│   │       ├── userTestData.csv
+│   │       └── productTestData.csv
+│   │
+│   └── locators/                              [Locator Properties]
+│       ├── loginPageLocators.properties
+│       ├── productPageLocators.properties
+│       ├── cartPageLocators.properties
+│       └── commonPageLocators.properties
+│
+├── test-output/                               [Test Execution Output Directory]
+│   ├── report/                                [Allure Report Directory]
+│   │   ├── allure-results/
+│   │   └── index.html
+│   │
+│   ├── screenshots/                           [Failure Screenshots]
+│   │   ├── 2026-06-22/
+│   │   └── ...
+│   │
+│   └── logs/                                  [Test Execution Logs]
+│       └── test-execution.log
+│
+├── logs/                                      [Application Logs Directory]
+│   ├── automation.log
+│   ├── automation.log.1
+│   └── ...
+│
+├── documentation/                             [Project Documentation]
+│   ├── SETUP.md                               [Setup & Installation Guide]
+│   ├── ARCHITECTURE.md                        [Architecture Details]
+│   ├── CONTRIBUTING.md                        [Contribution Guidelines]
+│   ├── TROUBLESHOOTING.md                     [Common Issues & Solutions]
+│   ├── TEST_CASES.md                          [Test Case Specifications]
+│   ├── API_DOCUMENTATION.md                   [API Testing Guide]
+│   └── CI_CD_INTEGRATION.md                   [CI/CD Setup Guide]
+│
+├── target/                                    [Maven Build Output (Auto-generated)]
+│   ├── classes/
+│   ├── test-classes/
+│   └── ...
+│
+├── .git/                                      [Git Repository (Auto-generated)]
+└── README.md                                  [Main Project README]
+
+================================================================================
+SUMMARY OF CONTENTS
+================================================================================
+
+MAIN SOURCE CODE (src/main/java/):
+├── Config & Environment Management:          5 Classes
+├── Driver Management & Browser Setup:         8 Classes
+├── Wait Strategies:                           4 Classes
+├── Base Classes:                              4 Classes
+├── Page Objects (POM):                       12 Classes
+├── Action Classes:                            5 Classes
+├── API Testing Layer:                        12 Classes
+├── Data Handling:                             8 Classes
+├── AI Integration (Ollama):                   5 Classes
+├── Utilities:                                 8 Classes
+├── Listeners & Retry:                         5 Classes
+├── Reporting:                                 4 Classes
+└── Custom Exceptions:                         4 Classes
+                                         TOTAL: 84 Classes
+
+TEST CODE (src/test/java/):
+├── UI Tests:
+│   ├── Auth Tests:                            3 Classes
+│   ├── Product Tests:                         4 Classes
+│   ├── Cart Tests:                            4 Classes
+│   ├── User Tests:                            2 Classes
+│   └── Integration Tests:                     2 Classes
+│
+├── API Tests:
+│   ├── Auth API Tests:                        3 Classes
+│   ├── User API Tests:                        3 Classes
+│   ├── Product API Tests:                     3 Classes
+│   ├── Order API Tests:                       3 Classes
+│   └── Integration Tests:                     3 Classes
+│
+└── Utilities:                                 1 Class
+                                         TOTAL: 30+ Test Classes
+
+TEST DATA & CONFIGURATION:
+├── Configuration Files:                       5 Files
+├── JSON Test Data:                            4 Files
+├── Excel Test Data:                           2 Files
+├── CSV Test Data:                             2 Files
+└── Locator Properties:                        4 Files
+
+TOTAL PROJECT FILES: 150+
+
+================================================================================
+KEY FEATURES BY DIRECTORY
+================================================================================
+
+[config/]              - Centralized environment & framework configuration
+[driver/]              - WebDriver lifecycle management with ThreadLocal support
+[waits/]               - Custom wait strategies and explicit wait handlers
+[base/]                - Abstract base classes for Pages, Tests, Actions, and APIs
+[pages/]               - Page Object Model implementation (organized by feature)
+[actions/]             - Reusable business logic and workflow methods
+[api/]                 - REST API testing with models, endpoints, and helpers
+[data/]                - Data-driven testing with JSON, Excel, CSV support
+[ai/]                  - Ollama AI integration for self-healing and analysis
+[utilities/]           - Common utility functions for file, date, data, etc.
+[listeners/]           - TestNG listeners for hooks and custom behaviors
+[reporting/]           - Allure and ExtentReports integration
+[exceptions/]          - Custom framework exceptions
+
+================================================================================
+ARCHITECTURAL LAYERS
+================================================================================
+
+Layer 1: Configuration & Setup
+  ├── ConfigManager (singleton)
+  ├── PropertyReader
+  └── EnvironmentConfig
+
+Layer 2: Browser & Driver Management
+  ├── DriverManager (ThreadLocal)
+  ├── DriverFactory
+  └── CapabilityFactory
+
+Layer 3: Wait & Synchronization
+  ├── WaitHelper
+  ├── CustomWait
+  └── WaitFactory
+
+Layer 4: Page Objects & Actions
+  ├── BasePage
+  ├── BaseActions
+  ├── Page Classes
+  └── Action Classes
+
+Layer 5: Test Execution
+  ├── BaseTest
+  ├── Test Classes
+  └── TestNG Listeners
+
+Layer 6: API Testing
+  ├── BaseAPI
+  ├── APIHelper
+  ├── API Test Classes
+  └── Endpoint Definitions
+
+Layer 7: Data Handling
+  ├── DataReaders
+  ├── Test Data Models
+  └── Test Data Builders
+
+Layer 8: AI Integration
+  ├── OllamaAIHelper
+  ├── SelfHealingHelper
+  └── Failure Analyzer
+
+Layer 9: Utilities & Helpers
+  ├── Common Utilities
+  ├── Screenshot Handler
+  └── Encryption/Validation
+
+Layer 10: Reporting & Analysis
+  ├── ReportManager
+  ├── AllureReportHelper
+  └── ExtentReportHelper
+
+================================================================================
+EXECUTION FLOW
+================================================================================
+
+Test Execution Sequence:
+1. Load Configuration → ConfigManager.loadEnvironment()
+2. Initialize Driver → DriverManager.getDriver()
+3. Open Application → Navigate to Base URL
+4. Load Test Data → DataReader.readTestData()
+5. Execute Test Steps → Page/Action Classes
+6. Verify Results → Assertions + Allure Steps
+7. On Failure → Screenshot + AI Analysis (Ollama)
+8. Generate Report → Allure HTML Report
+9. Cleanup → DriverManager.quitDriver()
+10. Archive Report → Store in test-output/report/
+
+================================================================================
+PARALLEL EXECUTION SUPPORT
+================================================================================
+
+- ThreadLocal WebDriver per thread
+- Configurable thread count in testng.xml
+- Thread-safe ConfigManager singleton
+- Independent test data per test
+- Isolated browser instances
+- Concurrent report generation
+
+Recommended Setup:
+- Local Parallel: 4-8 threads
+- CI/CD Parallel: 16-32 threads
+- Cloud Parallel: Unlimited (per infrastructure)
+
+================================================================================
+END OF DIRECTORY STRUCTURE
+================================================================================

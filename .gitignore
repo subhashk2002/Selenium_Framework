@@ -1,0 +1,40 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.iml
+.DS_Store
+
+# Maven
+target/
+.m2/
+*.jar
+*.war
+
+# Gradle
+.gradle/
+build/
+
+# Test Reports
+test-output/
+allure-report/
+allure-results/
+
+# Screenshots
+screenshots/
+logs/
+
+# Environment Files
+.env
+.env.local
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Node (if using npm)
+node_modules/
+package-lock.json
+yarn.lock

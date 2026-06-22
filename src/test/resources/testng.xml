@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Hybrid Automation Framework Test Suite" parallel="methods" thread-count="2">
+
+    <!-- Listeners Configuration -->
+    <listeners>
+        <listener class-name="com.automation.listeners.TestListener" />
+    </listeners>
+
+    <!-- UI Tests -->
+    <test name="UI Tests" enabled="true">
+        <groups>
+            <run>
+                <include name="ui" />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.automation.tests.ui.LoginTest" />
+            <class name="com.automation.tests.ui.HomePageTest" />
+        </classes>
+    </test>
+
+    <!-- API Tests -->
+    <test name="API Tests" enabled="true">
+        <groups>
+            <run>
+                <include name="api" />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.automation.tests.api.AuthAPITest" />
+            <class name="com.automation.tests.api.UserAPITest" />
+            <class name="com.automation.tests.api.ProductAPITest" />
+        </classes>
+    </test>
+
+    <!-- Smoke Tests -->
+    <test name="Smoke Tests" enabled="true">
+        <groups>
+            <run>
+                <include name="smoke" />
+            </run>
+        </groups>
+    </test>
+
+    <!-- Regression Tests -->
+    <test name="Regression Tests" enabled="true">
+        <groups>
+            <run>
+                <include name="regression" />
+            </run>
+        </groups>
+    </test>
+
+    <!-- Sanity Tests -->
+    <test name="Sanity Tests" enabled="true">
+        <groups>
+            <run>
+                <include name="sanity" />
+            </run>
+        </groups>
+    </test>
+
+</suite>

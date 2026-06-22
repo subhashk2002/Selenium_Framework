@@ -1,0 +1,51 @@
+{
+  "validUsers": [
+    {
+      "email": "testuser1@example.com",
+      "password": "TestPassword@123",
+      "firstName": "Test",
+      "lastName": "User1"
+    },
+    {
+      "email": "testuser2@example.com",
+      "password": "SecurePass@456",
+      "firstName": "Test",
+      "lastName": "User2"
+    },
+    {
+      "email": "admin@example.com",
+      "password": "AdminPassword@789",
+      "firstName": "Admin",
+      "lastName": "User"
+    }
+  ],
+  "invalidUsers": [
+    {
+      "email": "invalid@example.com",
+      "password": "WrongPassword",
+      "expectedError": "Invalid credentials"
+    },
+    {
+      "email": "",
+      "password": "TestPassword@123",
+      "expectedError": "Email is required"
+    },
+    {
+      "email": "testuser@example.com",
+      "password": "",
+      "expectedError": "Password is required"
+    }
+  ],
+  "edgeCases": [
+    {
+      "email": "user+tag@example.com",
+      "password": "TestPassword@123",
+      "description": "Email with plus sign"
+    },
+    {
+      "email": "user.name@example.com",
+      "password": "TestPassword@123",
+      "description": "Email with dot"
+    }
+  ]
+}

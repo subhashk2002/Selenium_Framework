@@ -1,0 +1,55 @@
+{
+  "validProducts": [
+    {
+      "name": "Laptop Pro",
+      "description": "High-performance laptop",
+      "price": 1299.99,
+      "category": "electronics",
+      "quantity": 50,
+      "sku": "LAPTOP-001"
+    },
+    {
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse",
+      "price": 49.99,
+      "category": "electronics",
+      "quantity": 200,
+      "sku": "MOUSE-001"
+    },
+    {
+      "name": "USB-C Cable",
+      "description": "High-speed USB-C cable",
+      "price": 19.99,
+      "category": "accessories",
+      "quantity": 500,
+      "sku": "CABLE-001"
+    }
+  ],
+  "invalidProducts": [
+    {
+      "name": "",
+      "description": "Product without name",
+      "price": 99.99,
+      "expectedError": "Product name is required"
+    },
+    {
+      "name": "Invalid Product",
+      "description": "Product with negative price",
+      "price": -50.00,
+      "expectedError": "Price must be positive"
+    },
+    {
+      "name": "Product",
+      "description": "Product without category",
+      "price": 99.99,
+      "category": "",
+      "expectedError": "Category is required"
+    }
+  ],
+  "categories": [
+    "electronics",
+    "accessories",
+    "software",
+    "services"
+  ]
+}
