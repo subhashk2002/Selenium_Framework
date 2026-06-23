@@ -27,18 +27,13 @@ public class AlertActions {
      *
      * @return - Alert object
      */
-    public static Alert waitForAlert() {
-        try {
-            log.debug("Waiting for alert to appear");
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
-            wait.until(ExpectedConditions.alertIsPresent());
-            Alert alert = driver.switchTo().alert();
-            log.info("Alert appeared");
-            return alert;
-        } catch (TimeoutException e) {
-            log.error("Alert did not appear within timeout");
-            throw new RuntimeException("Alert timeout", e);
-        }
+    public static Alert waitForAlert() throws TimeoutException {
+        log.debug("Waiting for alert to appear");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+        wait.until(ExpectedConditions.alertIsPresent());
+        Alert alert = driver.switchTo().alert();
+        log.info("Alert appeared");
+        return alert;
     }
 
     /**
@@ -46,17 +41,12 @@ public class AlertActions {
      *
      * @return - Alert text
      */
-    public static String getAlertText() {
-        try {
-            log.debug("Getting alert text");
-            Alert alert = waitForAlert();
-            String alertText = alert.getText();
-            log.info("Alert text: {}", alertText);
-            return alertText;
-        } catch (NoAlertPresentException e) {
-            log.error("No alert present");
-            throw new RuntimeException("No alert present", e);
-        }
+    public static String getAlertText() throws NoAlertPresentException {
+        log.debug("Getting alert text");
+        Alert alert = waitForAlert();
+        String alertText = alert.getText();
+        log.info("Alert text: {}", alertText);
+        return alertText;
     }
 
     /**
